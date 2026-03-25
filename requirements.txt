@@ -1,4 +1,2 @@
 ImageHash
 Pillow
-imagedominantcolor
-yt-dlp

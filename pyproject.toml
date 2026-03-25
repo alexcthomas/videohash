@@ -1,0 +1,80 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "videohash"
+version = "3.0.1"
+description = "Python package for Near Duplicate Video Detection (Perceptual Video Hashing) - Get a 64-bit comparable hash-value for any video."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Akash Mahanty", email = "akamhy@yahoo.com" }]
+requires-python = ">=3.6"
+dependencies = [
+    "Pillow",
+    "ImageHash",
+]
+keywords = [
+    "videohash",
+    "near duplicate video detection",
+    "NDVD",
+    "perceptual video hashing",
+    "video hashing",
+    "near duplicate video",
+    "compare videos",
+    "video",
+    "video diff",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Information Technology",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: POSIX :: BSD",
+    "Topic :: Multimedia :: Video",
+    "Natural Language :: English",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+    "Typing :: Typed",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: Implementation :: CPython",
+]
+
+[project.urls]
+Homepage = "https://akamhy.github.io/videohash/"
+Source = "https://github.com/akamhy/videohash"
+Documentation = "https://github.com/akamhy/videohash/wiki"
+Tracker = "https://github.com/akamhy/videohash/issues"
+
+[project.optional-dependencies]
+dev = [
+    "requests",
+    "pytest",
+    "pytest-cov",
+    "codecov",
+    "patool",
+    "pyunpack",
+    "flake8",
+    "mypy",
+    "types-Pillow",
+    "black",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["videohash*"]
+
+[tool.flake8]
+max-line-length = 127
+extend-ignore = ["E203", "W503"]
