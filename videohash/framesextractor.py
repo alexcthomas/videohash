@@ -188,17 +188,17 @@ class FramesExtractor:
         video_path = self.video_path
         output_dir = self.output_dir
 
-        if os.name == "posix":
-            ffmpeg_path = shlex.quote(self.ffmpeg_path)
-            video_path = shlex.quote(self.video_path)
-            output_dir = shlex.quote(self.output_dir)
+        # if os.name == "posix":
+        #     ffmpeg_path = shlex.quote(self.ffmpeg_path)
+        #     video_path = shlex.quote(self.video_path)
+        #     output_dir = shlex.quote(self.output_dir)
 
         crop = FramesExtractor.detect_crop(
             video_path=video_path, frames=3, ffmpeg_path=ffmpeg_path
         )
 
         command = (
-            f'"{ffmpeg_path}"'
+            ffmpeg_path
             + " -i "
             + f'"{video_path}"'
             + f"{crop}"
